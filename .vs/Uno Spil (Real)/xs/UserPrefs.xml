@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{B78142D9-F5E5-4EC4-8BDF-4A30739C673A}|Default">
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.ItemProperties.Uno_220Spil_220_228Real_229 PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Uno Spil (Real)/MainPage.xaml.cs">
+    <Files>
+      <File FileName="Uno Spil (Real)/MainPage.xaml.cs" Line="62" Column="15" />
+      <File FileName="Uno Spil (Real)/gamerequests.cs" Line="7" Column="34" />
+      <File FileName="Uno Spil (Real)/MainPage.xaml" Line="55" Column="46" />
+      <File FileName="Uno Spil (Real)/AppShell.xaml" />
+      <File FileName="Uno Spil (Real)/App.xaml" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Uno Spil (Real)" expanded="True">
+            <Node name="Uno Spil (Real)" expanded="True">
+              <Node name="MainPage.xaml" expanded="True">
+                <Node name="MainPage.xaml.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+</Properties>

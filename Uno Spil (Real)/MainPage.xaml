@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Uno_Spil__Real_.MainPage">
+
+    <Grid RowDefinitions=".20*, .20*, .20*, .20*, .20*"
+          ColumnDefinitions=".20*, .20*, .20*, .20*, .20*"
+          Padding="10"
+          RowSpacing="10"
+          x:Name="grid">
+
+        <Label x:Name="joinCodeLabel"
+               Text="Join code: "
+               Grid.Column="2"
+               Grid.Row="0"
+               HorizontalOptions="Center"
+               FontSize="Small"/>
+
+        <VerticalStackLayout Grid.Row="2"
+                             Grid.Column="2"
+                             Spacing="0"
+                             x:Name="MainMenu"
+                             IsVisible="true">
+            <Button Text="Create Game"
+                    FontSize="Large"
+                    Margin="0, 0, 0, 20"
+                    Clicked="CreateGameClicked"/>
+
+            <Entry x:Name="joinCode"
+               Placeholder="Enter join code"
+                   TextColor="Black"
+                   FontSize="Large"/>
+
+            <Button Text="Join game"
+                    FontSize="Large"
+                    Clicked="JoinGameClicked"/>
+
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="2"
+                             Grid.Column="2"
+                             Spacing="0"
+                             x:Name="StartGameLayout"
+                             IsVisible="false">
+            <Button Text="Start the game"
+                    FontSize="Large"
+                    Margin="0, 0, 0, 20"
+                    Clicked="startTheGameClicked"/>
+        </VerticalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="2"
+                             Grid.Column="2"
+                             Spacing="-50"
+                             x:Name="DecksLayout"
+                             IsVisible="false"
+                             HorizontalOptions="Center">
+            <ImageButton Source="/Users/marcusbager/Desktop/my_projects/uno express server/images/back.png"
+                         WidthRequest="250"
+                         HeightRequest="220"
+                         x:Name="deckCards" />
+
+            <ImageButton Source="/Users/marcusbager/Desktop/my_projects/uno express server/images/back.png"
+                         WidthRequest="250"
+                         HeightRequest="220"
+                         x:Name="usedCards" />
+        </HorizontalStackLayout>
+
+        <ImageButton
+            Source="/Users/marcusbager/Desktop/my_projects/uno express server/images/uno!.png"
+            Grid.Column="1"
+            Grid.Row="3"
+            WidthRequest="200"
+            HeightRequest="100"
+            x:Name="Uno"
+            IsVisible="false"/>
+
+
+        <HorizontalStackLayout Grid.Column="1"
+                Grid.Row="5"
+                Grid.RowSpan="1"
+                Grid.ColumnSpan="3"
+                x:Name="player1"
+                HorizontalOptions="Center"
+                Spacing="-30">
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Grid.Column="1"
+                Grid.Row="0"
+                Grid.RowSpan="1"
+                Grid.ColumnSpan="3"
+                x:Name="player2"
+                HorizontalOptions="Center"
+                Margin="-20"
+                Spacing="-30">
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Grid.Column="4"
+                Grid.Row="3"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="3"
+                x:Name="player3"
+                Rotation="-90"
+                Padding="-20"
+                HorizontalOptions="Center"
+                Margin="-20"
+                Spacing="-30">
+
+        </HorizontalStackLayout>
+
+
+        <HorizontalStackLayout Grid.Column="0"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="1"
+                x:Name="player4"
+                Rotation="90"
+                HorizontalOptions="CenterAndExpand"
+                Margin="-20"
+                Spacing="-30">
+
+
+        </HorizontalStackLayout>
+    </Grid>
+
+        
+</ContentPage>
+
+
+            
