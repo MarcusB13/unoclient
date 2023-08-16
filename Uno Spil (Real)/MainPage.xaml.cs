@@ -152,16 +152,21 @@ public partial class MainPage : ContentPage
     }
     
 
-    private void LoadPlayerCards(string playerName, JsonElement cards)
+    private void LoadPlayerCards(string toAddPlayerName, JsonElement cards)
     {
-        HorizontalStackLayout playerLayout = this.FindByName<HorizontalStackLayout>(playerName);
+        HorizontalStackLayout playerLayout = this.FindByName<HorizontalStackLayout>(toAddPlayerName);
         //playerLayout.Children.Clear();
 
         for (int cardNumber = 0; cardNumber < cards.GetArrayLength(); cardNumber++)
         {
+            string cardName = cards[cardNumber].ToString();
+            if(toAddPlayerName != playerName)
+            {
+                cardName = "back.png";
+            }
             ImageButton img = new ImageButton
             {
-                Source = "/Users/marcusbager/Desktop/my_projects/uno express server/images/" + cards[cardNumber],
+                Source = "/Users/marcusbager/Desktop/my_projects/uno express server/images/" + cardName,
                 IsVisible = true,
                 WidthRequest = 90,
                 HeightRequest = 150,
