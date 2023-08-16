@@ -237,9 +237,6 @@
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-ios/iossimulator-x64/resizetizer/r/Assets.xcassets/appicon.appiconset/appicon83.5x83.5@2x.png
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-ios/iossimulator-x64/resizetizer/r/Assets.xcassets/appicon.appiconset/appiconItunesArtwork.png
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-ios/iossimulator-x64/resizetizer/r/Assets.xcassets/appicon.appiconset/Contents.json
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-ios/iossimulator-x64/resizetizer/r/dotnet_bot.png
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-ios/iossimulator-x64/resizetizer/r/dotnet_bot@2x.png
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-ios/iossimulator-x64/resizetizer/r/dotnet_bot@3x.png
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-ios/iossimulator-x64/resizetizer/r/splash.png
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-ios/iossimulator-x64/resizetizer/r/splash@2x.png
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-ios/iossimulator-x64/resizetizer/r/splash@3x.png

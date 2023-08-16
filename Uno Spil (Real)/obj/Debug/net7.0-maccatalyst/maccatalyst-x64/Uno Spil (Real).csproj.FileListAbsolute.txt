@@ -11,6 +11,9 @@
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/Microsoft.Extensions.Options.dll
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/Microsoft.Extensions.Primitives.dll
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/Microsoft.Maui.Graphics.dll
+/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/Newtonsoft.Json.dll
+/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/SocketIOClient.dll
+/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/SocketIOClient.Newtonsoft.Json.dll
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/Microsoft.CSharp.dll
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/Microsoft.VisualBasic.Core.dll
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/Microsoft.VisualBasic.dll
@@ -229,9 +232,6 @@
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/Assets.xcassets/appicon.appiconset/appicon83.5x83.5@2x.png
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/Assets.xcassets/appicon.appiconset/appiconItunesArtwork.png
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/Assets.xcassets/appicon.appiconset/Contents.json
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/dotnet_bot.png
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/dotnet_bot@2x.png
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/dotnet_bot@3x.png
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/mauiimage.stamp
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/f/MauiInfo.plist
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/mauifont.stamp
@@ -246,20 +246,6 @@
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/_ProcessedBundleResourcesPath.items
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/_ProcessedContentPath.items
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).csproj.AssemblyReference.cache
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).GeneratedMSBuildEditorConfig.editorconfig
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).AssemblyInfoInputs.cache
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).AssemblyInfo.cs
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).csproj.CoreCompileInputs.cache
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/XamlC.stamp
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).csproj.CopyComplete
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).dll
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/refint/Uno Spil (Real).dll
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).pdb
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).genruntimeconfig.cache
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/ref/Uno Spil (Real).dll
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/SocketIOClient.dll
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/Newtonsoft.Json.dll
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/SocketIOClient.Newtonsoft.Json.dll
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resourcestamps/Microsoft.CSharp.stamp
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resourcestamps/Microsoft.Extensions.Configuration.Abstractions.stamp
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resourcestamps/Microsoft.Extensions.Configuration.stamp
@@ -442,3 +428,14 @@
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resourcestamps/System.Xml.XPath.stamp
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resourcestamps/System.Xml.XPath.XDocument.stamp
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resourcestamps/WindowsBase.stamp
+/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).GeneratedMSBuildEditorConfig.editorconfig
+/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).AssemblyInfoInputs.cache
+/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).AssemblyInfo.cs
+/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).csproj.CoreCompileInputs.cache
+/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/XamlC.stamp
+/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).csproj.CopyComplete
+/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).dll
+/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/refint/Uno Spil (Real).dll
+/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).pdb
+/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/Uno Spil (Real).genruntimeconfig.cache
+/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/ref/Uno Spil (Real).dll

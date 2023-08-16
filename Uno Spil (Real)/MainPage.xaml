@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Uno_Spil__Real_.MainPage">
 
+
     <Grid RowDefinitions=".20*, .20*, .20*, .20*, .20*"
           ColumnDefinitions=".20*, .20*, .20*, .20*, .20*"
           Padding="10"

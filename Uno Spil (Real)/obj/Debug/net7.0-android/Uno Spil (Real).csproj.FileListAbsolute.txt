@@ -20,15 +20,10 @@
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-android/mauifont.stamp
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-android/resizetizer/f/OpenSans-Regular.ttf
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-android/resizetizer/f/OpenSans-Semibold.ttf
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-android/resizetizer/r/drawable-hdpi/dotnet_bot.png
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-android/resizetizer/r/drawable-hdpi/splash.png
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-android/resizetizer/r/drawable-mdpi/dotnet_bot.png
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-android/resizetizer/r/drawable-mdpi/splash.png
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-android/resizetizer/r/drawable-xhdpi/dotnet_bot.png
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-android/resizetizer/r/drawable-xhdpi/splash.png
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-android/resizetizer/r/drawable-xxhdpi/dotnet_bot.png
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-android/resizetizer/r/drawable-xxhdpi/splash.png
-/Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-android/resizetizer/r/drawable-xxxhdpi/dotnet_bot.png
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-android/resizetizer/r/drawable-xxxhdpi/splash.png
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/appicon.xml
 /Users/marcusbager/Projects/Uno Spil (Real)/Uno Spil (Real)/obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/appicon_round.xml

@@ -12,10 +12,6 @@
 		<data>
 		yJWwNCrzKR5oWPxLmaLRu2H7QhQ=
 		</data>
-		<key>Resources/MauiInfo.plist</key>
-		<data>
-		iEtuUGCV6JM3gxS/pO33swhmpp8=
-		</data>
 		<key>Resources/MonoTouchDebugConfiguration.txt</key>
 		<data>
 		oowkf1sL6T19nanXUObgmuayWqM=
@@ -31,18 +27,6 @@
 		<key>Resources/appicon.icns</key>
 		<data>
 		L9cHAOVSlaW2jMaBgy7GlIBZdZg=
-		</data>
-		<key>Resources/dotnet_bot.png</key>
-		<data>
-		qdYiPSemWrpOK00y89PG6ukhmkA=
-		</data>
-		<key>Resources/dotnet_bot@2x.png</key>
-		<data>
-		pZcH6LleT/tKpypJoIrgeT5V8z0=
-		</data>
-		<key>Resources/dotnet_bot@3x.png</key>
-		<data>
-		AgG9OaBqGlLlSsDbnE/6b1bb0xU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -1346,14 +1330,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pb+toR9DMmkKI6q8Re+IBDUgrI9FMQga5Cn6rzv8MHU=
+			6qp0+7h3ZTX6FrhHUhgopyqFKUt5nSp7QtJFXKlfIes=
 			</data>
 		</dict>
 		<key>MonoBundle/Uno Spil (Real).pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EIeX0B3J9V2Lw6D9LUppB3BzLZ6lD8UzHNxz1skuNCY=
+			MPZS9YbB4YWUpHSkcDbzo+DphJ+b8QYEXpsTjvnGjMs=
 			</data>
 		</dict>
 		<key>MonoBundle/WindowsBase.dll</key>
@@ -1447,13 +1431,6 @@
 			+lLAFyETc4ZUEE//bmtDqcWEdISbLT5fbaXzC50O+40=
 			</data>
 		</dict>
-		<key>Resources/MauiInfo.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			tx0KXqEC+DvcCGyogQTEQWHcCWJYYqH24NtPwhpQEjo=
-			</data>
-		</dict>
 		<key>Resources/MonoTouchDebugConfiguration.txt</key>
 		<dict>
 			<key>hash2</key>
@@ -1480,27 +1457,6 @@
 			<key>hash2</key>
 			<data>
 			H4w+DqGNITnXOEy4UxkSBph9BjGxHf/ui2zq6lzv5a0=
-			</data>
-		</dict>
-		<key>Resources/dotnet_bot.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nj9w48ATNqlPSMACcu8GOeBxwJ5X0tfo5PhxSbenWuc=
-			</data>
-		</dict>
-		<key>Resources/dotnet_bot@2x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			SOfOgPr5Yk4bVioaDw9goZcPhI1O8+PGNEXqhGrdERo=
-			</data>
-		</dict>
-		<key>Resources/dotnet_bot@3x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			06Dw48r2qORp1zVQzu1FMEqEQpN18taU/bp0JACYc40=
 			</data>
 		</dict>
 	</dict>
