@@ -164,9 +164,10 @@ public partial class MainPage : ContentPage
             {
                 cardName = "back.png";
             }
+            cardName = cardName.Replace(".png", "card.png");
             ImageButton img = new ImageButton
             {
-                Source = "/Users/marcusbager/Desktop/my_projects/uno express server/images/" + cardName,
+                Source = "./" + cardName,
                 IsVisible = true,
                 WidthRequest = 90,
                 HeightRequest = 150,
