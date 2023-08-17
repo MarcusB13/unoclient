@@ -60,7 +60,8 @@
             <ImageButton Source="http://10.130.66.233:3000/public/back.png"
                          WidthRequest="250"
                          HeightRequest="220"
-                         x:Name="deckCards" />
+                         x:Name="deckCards"
+                         Clicked="drawCard"/>
 
             <ImageButton Source="http://10.130.66.233:3000/public/back.png"
                          WidthRequest="250"

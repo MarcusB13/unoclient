@@ -258,7 +258,11 @@ namespace Uno_Spil__Real_
             await client.EmitAsync("start-game", gameCode);
         }
 
-
+        public void drawCard(object sender, EventArgs e)
+        {
+            if (turn != playerName) { return; }
+            client.EmitAsync("draw-card");
+        }
 
         private async void CreateGameClicked(object sender, EventArgs e)
         {
