@@ -232,7 +232,7 @@ namespace Uno_Spil__Real_
                     string CardNamed = cardName.Replace("green", "").Replace("red", "").Replace("blue", "").Replace("yellow", "");
                     Label ss = (Label)FindByName("joinCodeLabel");
                     ss.Text = "Join code: " + topCardName;
-                    if (color != cardColor && CardNamed != topCardName)
+                    if (color != cardColor && CardNamed != topCardName && CardNamed != "wild" && CardNamed != "draw4")
                     {
                         return;
                     }
@@ -261,7 +261,7 @@ namespace Uno_Spil__Real_
         public void drawCard(object sender, EventArgs e)
         {
             if (turn != playerName) { return; }
-            client.EmitAsync("draw-card");
+            client.EmitAsync("draw-card", playerName);
         }
 
         private async void CreateGameClicked(object sender, EventArgs e)
