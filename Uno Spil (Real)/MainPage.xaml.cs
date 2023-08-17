@@ -8,7 +8,7 @@ namespace Uno_Spil__Real_
 {
     public partial class MainPage : ContentPage
     {
-        private string baseUrl = "http://localhost:3000";
+        private string baseUrl = "http://10.130.66.233:3000";
 
         private string gameCode;
         private string playerName;
@@ -43,6 +43,22 @@ namespace Uno_Spil__Real_
                 });
             });
 
+            client.On("other-join-game", (res) =>
+            {
+                MainThread.BeginInvokeOnMainThread(async () =>
+                {
+                    JsonElement data = res.GetValue();
+                    JsonElement cards = data.GetProperty("cards");
+
+
+                    Label JoinCodeLabel = (Label)FindByName("joinCodeLabel");
+                    JoinCodeLabel.Text = "Join code: " + gameCode;
+
+                    SetPlayersPosition();
+                    LoadPlayerCards(playerName, cards);
+                    MainMenu.IsVisible = false;
+                });
+            });
 
             client.On("join-game", (res) =>
             {
@@ -59,27 +75,26 @@ namespace Uno_Spil__Real_
                     SetPlayersPosition();
                     LoadPlayerCards(playerName, cards);
                     MainMenu.IsVisible = false;
-                    DecksLayout.IsVisible = true;
                 });
+            });
 
-                client.On("set-top-card", (res) =>
+            client.On("set-top-card", (res) =>
+            {
+                MainThread.BeginInvokeOnMainThread(async () =>
                 {
-                    MainThread.BeginInvokeOnMainThread(async () =>
-                    {
-                        JsonElement data = res.GetValue();
-                        topCard = data.GetProperty("card").ToString();
-                        SetTopCard(topCard);
-                    });
+                    JsonElement data = res.GetValue();
+                    topCard = data.GetProperty("card").ToString();
+                    SetTopCard(topCard);
                 });
+            });
 
-                client.On("set-turn", (res) =>
+            client.On("set-turn", (res) =>
+            {
+                MainThread.BeginInvokeOnMainThread(async () =>
                 {
-                    MainThread.BeginInvokeOnMainThread(async () =>
-                    {
-                        JsonElement data = res.GetValue();
-                        turn = data.GetProperty("whosTurn").ToString();
-                        SetTurn(turn);
-                    });
+                    JsonElement data = res.GetValue();
+                    turn = data.GetProperty("whosTurn").ToString();
+                    SetTurn(turn);
                 });
             });
 
@@ -116,6 +131,7 @@ namespace Uno_Spil__Real_
                 JsonElement playersNames = data.GetProperty("playersNames");
                 JsonElement players = data.GetProperty("players");
                 string nextPlayer = data.GetProperty("nextPlayer").ToString();
+                bool displayUno = data.GetProperty("uno").GetBoolean();
                 topCard = data.GetProperty("topCard").ToString();
                 color = data.GetProperty("color").ToString();
 
@@ -127,6 +143,7 @@ namespace Uno_Spil__Real_
                         LoadPlayerCards(iPlayerName, players.GetProperty(iPlayerName));
                         SetTopCard(topCard);
                         SetTurn(nextPlayer);
+                        if (displayUno) { DisplayUno(); }
                     }
                 });
             });
@@ -134,6 +151,11 @@ namespace Uno_Spil__Real_
             client.ConnectAsync();
         }
 
+
+        public void DisplayUno()
+        {
+            Uno.IsVisible = true;
+        }
 
         public void SetTopCard(string card)
         {
@@ -194,6 +216,7 @@ namespace Uno_Spil__Real_
                     IsVisible = true,
                     WidthRequest = 90,
                     HeightRequest = 150,
+                    Aspect=Aspect.AspectFit,
                     ClassId = cardName
                 };
                 img.Clicked += (sender, e) =>
@@ -246,7 +269,7 @@ namespace Uno_Spil__Real_
         private async void JoinGameClicked(object sender, EventArgs e)
         {
             gameCode = joinCode.Text;
-            await client.EmitAsync("start-game", gameCode);
+            await client.EmitAsync("join-game", gameCode);
         }
     }
 }

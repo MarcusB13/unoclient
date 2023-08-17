@@ -57,19 +57,19 @@
                              x:Name="DecksLayout"
                              IsVisible="false"
                              HorizontalOptions="Center">
-            <ImageButton Source="/Users/marcusbager/Desktop/my_projects/uno express server/images/back.png"
+            <ImageButton Source="http://10.130.66.233:3000/public/back.png"
                          WidthRequest="250"
                          HeightRequest="220"
                          x:Name="deckCards" />
 
-            <ImageButton Source="/Users/marcusbager/Desktop/my_projects/uno express server/images/back.png"
+            <ImageButton Source="http://10.130.66.233:3000/public/back.png"
                          WidthRequest="250"
                          HeightRequest="220"
                          x:Name="usedCards" />
         </HorizontalStackLayout>
 
         <ImageButton
-            Source="/Users/marcusbager/Desktop/my_projects/uno express server/images/uno!.png"
+            Source="http://10.130.66.233:3000/public/uno.png"
             Grid.Column="1"
             Grid.Row="3"
             WidthRequest="200"
@@ -105,7 +105,6 @@
                 Grid.ColumnSpan="3"
                 x:Name="player3"
                 Rotation="-90"
-                Padding="-20"
                 HorizontalOptions="Center"
                 Margin="-20"
                 Spacing="-30">
