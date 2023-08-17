@@ -110,6 +110,26 @@ namespace Uno_Spil__Real_
                 });
             });
 
+            client.On("lay-card", (res) =>
+            {
+                JsonElement data = res.GetValue();
+                JsonElement playersNames = data.GetProperty("playersNames");
+                JsonElement players = data.GetProperty("players");
+                string nextPlayer = data.GetProperty("nextPlayer").ToString();
+                topCard = data.GetProperty("topCard").ToString();
+                color = data.GetProperty("color").ToString();
+
+                MainThread.BeginInvokeOnMainThread(async () =>
+                {
+                    for (int i = 0; i < playersNames.GetArrayLength(); i++)
+                    {
+                        string iPlayerName = playersNames[i].ToString();
+                        LoadPlayerCards(iPlayerName, players.GetProperty(iPlayerName));
+                        SetTopCard(topCard);
+                        SetTurn(nextPlayer);
+                    }
+                });
+            });
 
             client.ConnectAsync();
         }
@@ -118,7 +138,7 @@ namespace Uno_Spil__Real_
         public void SetTopCard(string card)
         {
             topCard = card;
-            usedCards.Source = "/Users/marcusbager/Desktop/my_projects/uno express server/images/" + topCard;
+            usedCards.Source = baseUrl + "/public/" + topCard + ".png";
         }
 
         public void SetTurn(string playersTurn)
@@ -167,17 +187,39 @@ namespace Uno_Spil__Real_
                 {
                     cardName = "back";
                 }
-                Label ss = (Label)FindByName("joinCodeLabel");
-                ss.Text = "Join code: " + cardName;
+
                 ImageButton img = new ImageButton
                 {
                     Source = baseUrl + "/public/" + cardName + ".png",
                     IsVisible = true,
                     WidthRequest = 90,
                     HeightRequest = 150,
+                    ClassId = cardName
                 };
                 img.Clicked += (sender, e) =>
                 {
+                    if (turn != playerName) { return; }
+                    string card = ((ImageButton)sender).ClassId;
+                    string cardColor = "";
+                    
+                    if (card.Contains("blue")){ cardColor = "blue"; }
+                    if (card.Contains("yellow")){ cardColor = "yellow"; }
+                    if (card.Contains("red")){ cardColor = "red"; }
+                    if (card.Contains("green")){ cardColor = "green"; }
+
+                    string topCardName = topCard.Replace("green", "").Replace("red", "").Replace("blue", "").Replace("yellow", "");
+
+                    if (color != cardColor && cardName != topCardName)
+                    {
+                        return;
+                    }
+
+                    Dictionary<string, string> data = new Dictionary<string, string> {
+                        { "player", playerName },
+                        { "card",  cardName },
+                        { "color", cardColor}
+                    };
+                    client.EmitAsync("lay-card", data);
 
                 };
                 playerLayout.Add(img);
