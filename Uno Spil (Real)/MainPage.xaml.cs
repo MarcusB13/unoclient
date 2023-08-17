@@ -15,6 +15,7 @@ namespace Uno_Spil__Real_
         private string color;
         private string turn;
         private string topCard;
+        private string unoClicked = "false";
 
         private SocketIO client;
 
@@ -143,7 +144,10 @@ namespace Uno_Spil__Real_
                         LoadPlayerCards(iPlayerName, players.GetProperty(iPlayerName));
                         SetTopCard(topCard);
                         SetTurn(nextPlayer);
-                        if (displayUno) { DisplayUno(); }
+                        if (nextPlayer == playerName)
+                        {
+                            if (displayUno) { DisplayUno(); }
+                        }
                     }
                 });
             });
@@ -240,10 +244,10 @@ namespace Uno_Spil__Real_
                     Dictionary<string, string> data = new Dictionary<string, string> {
                         { "player", playerName },
                         { "card",  cardName },
-                        { "color", cardColor}
+                        { "color", cardColor},
+                        { "unoClicked", unoClicked}
                     };
                     client.EmitAsync("lay-card", data);
-
                 };
                 playerLayout.Add(img);
             }
@@ -276,6 +280,17 @@ namespace Uno_Spil__Real_
             await client.ConnectAsync();
             gameCode = joinCode.Text;
             await client.EmitAsync("join-game", gameCode);
+        }
+
+        private void UnoClicked(object sender, EventArgs e)
+        {
+            Uno.IsVisible = false;
+            unoClicked = "true";
+            System.Threading.Tasks.Task.Factory.StartNew(() =>
+            {
+                Thread.Sleep(5000);
+                unoClicked = "false";
+            });
         }
     }
 }

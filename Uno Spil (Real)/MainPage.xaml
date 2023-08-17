@@ -76,7 +76,8 @@
             WidthRequest="200"
             HeightRequest="100"
             x:Name="Uno"
-            IsVisible="false"/>
+            IsVisible="false"
+            Clicked="UnoClicked"/>
 
 
         <HorizontalStackLayout Grid.Column="1"
