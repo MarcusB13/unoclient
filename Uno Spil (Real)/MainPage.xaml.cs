@@ -8,6 +8,8 @@ namespace Uno_Spil__Real_
 {
     public partial class MainPage : ContentPage
     {
+        private string baseUrl = "http://localhost:3000";
+
         private string gameCode;
         private string playerName;
         private string color;
@@ -20,7 +22,7 @@ namespace Uno_Spil__Real_
         public MainPage()
         {
             InitializeComponent();
-            client = new SocketIO("http://localhost:3000");
+            client = new SocketIO(baseUrl);
 
             client.On("create-game", (res) =>
             {
@@ -156,22 +158,27 @@ namespace Uno_Spil__Real_
         private void LoadPlayerCards(string toAddPlayerName, JsonElement cards)
         {
             HorizontalStackLayout playerLayout = this.FindByName<HorizontalStackLayout>(toAddPlayerName);
-            //playerLayout.Children.Clear();
+            playerLayout.Children.Clear();
 
             for (int cardNumber = 0; cardNumber < cards.GetArrayLength(); cardNumber++)
             {
                 string cardName = cards[cardNumber].ToString();
                 if (toAddPlayerName != playerName)
                 {
-                    cardName = "back.png";
+                    cardName = "back";
                 }
-                cardName = cardName.Replace(".png", "card.png");
+                Label ss = (Label)FindByName("joinCodeLabel");
+                ss.Text = "Join code: " + cardName;
                 ImageButton img = new ImageButton
                 {
-                    Source = "/Users/marcusbager/Desktop/my_projects/uno express server/images/" + cardName,
+                    Source = baseUrl + "/public/" + cardName + ".png",
                     IsVisible = true,
                     WidthRequest = 90,
                     HeightRequest = 150,
+                };
+                img.Clicked += (sender, e) =>
+                {
+
                 };
                 playerLayout.Add(img);
             }

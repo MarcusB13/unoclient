@@ -1,36 +1,38 @@
 ﻿<Properties StartupConfiguration="{B78142D9-F5E5-4EC4-8BDF-4A30739C673A}|Default">
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Uno_220Spil_220_228Real_229 PreferredExecutionTarget="MyAppleMacCatalystID" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Uno_220Spil_220_228Real_229 PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MultiItemStartupConfigurations />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../usr/local/share/dotnet/packs/Microsoft.MacCatalyst.Sdk/16.4.7090/tools/msbuild/iOS/Xamarin.Shared.targets">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Uno Spil (Real)/MainPage.xaml.cs">
     <Files>
-      <File FileName="Uno Spil (Real)/MainPage.xaml.cs" Line="149" Column="59" />
+      <File FileName="Uno Spil (Real)/MainPage.xaml.cs" Line="163" Column="33" />
       <File FileName="Uno Spil (Real)/gamerequests.cs" />
-      <File FileName="Uno Spil (Real)/MainPage.xaml" Line="6" Column="1" />
+      <File FileName="Uno Spil (Real)/MainPage.xaml" Line="13" Column="38" />
       <File FileName="Uno Spil (Real)/AppShell.xaml" />
-      <File FileName="../../../../usr/local/share/dotnet/packs/Microsoft.MacCatalyst.Sdk/16.4.7090/tools/msbuild/iOS/Xamarin.Shared.targets" Line="2163" Column="3" />
+      <File FileName="../../../../usr/local/share/dotnet/packs/Microsoft.MacCatalyst.Sdk/16.4.7090/tools/msbuild/iOS/Xamarin.Shared.targets" Line="2164" Column="33" />
+      <File FileName="Uno Spil (Real)/AppShell.xaml.cs" Line="8" Column="3" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Uno Spil (Real)" expanded="True">
+          <Node name="Uno Spil (Real)">
             <Node name="Uno Spil (Real)">
-              <Node name="Platforms" expanded="True">
-                <Node name="MacCatalyst" expanded="True" />
+              <Node name="Resources">
+                <Node name="Images" expanded="True">
+                  <Node name="backcard.png" selected="True" />
+                </Node>
+                <Node name="Raw" expanded="True" />
               </Node>
-              <Node name="Resources" expanded="True" />
-              <Node name="MainPage.xaml" expanded="True">
-                <Node name="MainPage.xaml.cs" selected="True" />
-              </Node>
+              <Node name="AppShell.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
 </Properties>
