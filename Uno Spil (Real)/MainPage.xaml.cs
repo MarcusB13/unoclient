@@ -147,8 +147,6 @@ namespace Uno_Spil__Real_
                     }
                 });
             });
-
-            client.ConnectAsync();
         }
 
 
@@ -231,8 +229,10 @@ namespace Uno_Spil__Real_
                     if (card.Contains("green")){ cardColor = "green"; }
 
                     string topCardName = topCard.Replace("green", "").Replace("red", "").Replace("blue", "").Replace("yellow", "");
-
-                    if (color != cardColor && cardName != topCardName)
+                    string CardNamed = cardName.Replace("green", "").Replace("red", "").Replace("blue", "").Replace("yellow", "");
+                    Label ss = (Label)FindByName("joinCodeLabel");
+                    ss.Text = "Join code: " + topCardName;
+                    if (color != cardColor && CardNamed != topCardName)
                     {
                         return;
                     }
@@ -262,12 +262,14 @@ namespace Uno_Spil__Real_
 
         private async void CreateGameClicked(object sender, EventArgs e)
         {
+            await client.ConnectAsync();
             await client.EmitAsync("create-game", "");
         }
 
 
         private async void JoinGameClicked(object sender, EventArgs e)
         {
+            await client.ConnectAsync();
             gameCode = joinCode.Text;
             await client.EmitAsync("join-game", gameCode);
         }
