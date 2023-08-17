@@ -49,13 +49,13 @@ namespace Uno_Spil__Real_
                 {
                     JsonElement data = res.GetValue();
                     JsonElement cards = data.GetProperty("cards");
-
+                    string toAddPlayer = data.GetProperty("playerName").ToString();
 
                     Label JoinCodeLabel = (Label)FindByName("joinCodeLabel");
                     JoinCodeLabel.Text = "Join code: " + gameCode;
 
                     SetPlayersPosition();
-                    LoadPlayerCards(playerName, cards);
+                    LoadPlayerCards(toAddPlayer, cards);
                     MainMenu.IsVisible = false;
                 });
             });
