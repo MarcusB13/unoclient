@@ -19,6 +19,7 @@
                HorizontalOptions="Center"
                FontSize="Small"/>
 
+
         <VerticalStackLayout Grid.Row="2"
                              Grid.Column="2"
                              Spacing="0"
@@ -69,23 +70,6 @@
                          WidthRequest="250"
                          HeightRequest="220"
                          x:Name="usedCards" />
-        </HorizontalStackLayout>
-
-        <HorizontalStackLayout Grid.Row="2"
-                               Grid.Column="2"
-                               HorizontalOptions="Center"
-                               Spacing="25"
-                               IsVisible="false"
-                               x:Name="chooseColor">
-            <VerticalStackLayout VerticalOptions="Center" Spacing="25">
-                <Button Background="red" WidthRequest="175" HeightRequest="175" Margin="0,25,0,0" Clicked="RedClicked"/>
-                <Button Background="blue" WidthRequest="175" HeightRequest="175"  Clicked="BlueClicked"/>
-            </VerticalStackLayout>
-
-            <VerticalStackLayout VerticalOptions="Center" Spacing="25">
-                <Button Background="yellow" WidthRequest="175" HeightRequest="175"  Margin="0,25,0,0"  Clicked="YellowClicked"/>
-                <Button Background="green" WidthRequest="175" HeightRequest="175"  Clicked="GreenClicked"/>
-            </VerticalStackLayout>
         </HorizontalStackLayout>
 
         <ImageButton
@@ -150,8 +134,25 @@
 
 
         </HorizontalStackLayout>
-    </Grid>
 
+        <HorizontalStackLayout Grid.Row="1"
+                               Grid.Column="2"
+                               HorizontalOptions="Center"
+                               Spacing="25"
+                               IsVisible="false"
+                               x:Name="chooseColor"
+                               ZIndex="999">
+            <VerticalStackLayout VerticalOptions="Center">
+                <Button Background="red" WidthRequest="175" HeightRequest="175" Margin="0,25,0,25" Clicked="RedClicked"/>
+                <Button Background="blue" WidthRequest="175" HeightRequest="175" Margin="0,25,0,25" Clicked="BlueClicked"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout VerticalOptions="Center">
+                <Button Background="yellow" WidthRequest="175" HeightRequest="175"  Margin="0,25,0,25" Clicked="YellowClicked"/>
+                <Button Background="green" WidthRequest="175" HeightRequest="175" Margin="0,25,0,25" Clicked="GreenClicked"/>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+    </Grid>
         
 </ContentPage>
 

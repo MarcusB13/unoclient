@@ -16,6 +16,7 @@ namespace Uno_Spil__Real_
         private string turn;
         private string topCard;
         private string unoClicked = "false";
+        private bool choosingColor;
 
         private SocketIO client;
 
@@ -91,10 +92,13 @@ namespace Uno_Spil__Real_
 
             client.On("set-color", (res) =>
             {
-                JsonElement data = res.GetValue();
-                SetColor(data.GetProperty("color").ToString());
-                turn = data.GetProperty("nextPlayer").ToString();
-                SetTurn(turn);
+                MainThread.BeginInvokeOnMainThread(async () =>
+                {
+                    JsonElement data = res.GetValue();
+                    SetColor(data.GetProperty("color").ToString());
+                    turn = data.GetProperty("nextPlayer").ToString();
+                    SetTurn(turn);
+                });
             });
 
             client.On("set-turn", (res) =>
@@ -112,6 +116,8 @@ namespace Uno_Spil__Real_
                 MainThread.BeginInvokeOnMainThread(async () =>
                 {
                     chooseColor.IsVisible = true;
+                    choosingColor = true;
+                    DecksLayout.IsVisible = false;
                 });
             });
 
@@ -185,22 +191,22 @@ namespace Uno_Spil__Real_
         public void SetColor(string thisColor)
         {
             color = thisColor;
-            switch (thisColor)
+            switch (color)
             {
                 case "red":
-                    currentColor.Background = Microsoft.Maui.Controls.Brush.Red;
+                    currentColor.Background = Brush.Red;
                     break;
 
                 case "blue":
-                    currentColor.Background = Microsoft.Maui.Controls.Brush.Blue;
+                    currentColor.Background = Brush.Blue;
                     break;
 
                 case "green":
-                    currentColor.Background = Microsoft.Maui.Controls.Brush.Green;
+                    currentColor.Background = Brush.Green;
                     break;
 
                 case "yellow":
-                    currentColor.Background = Microsoft.Maui.Controls.Brush.Yellow;
+                    currentColor.Background = Brush.Yellow;
                     break;
             }
         }
@@ -283,7 +289,7 @@ namespace Uno_Spil__Real_
                 };
                 img.Clicked += (sender, e) =>
                 {
-                    if (turn != playerName) { return; }
+                    if (turn != playerName || choosingColor) { return; }
                     string card = ((ImageButton)sender).ClassId;
                     string cardColor = "";
                     
@@ -294,8 +300,7 @@ namespace Uno_Spil__Real_
 
                     string topCardName = topCard.Replace("green", "").Replace("red", "").Replace("blue", "").Replace("yellow", "");
                     string CardNamed = cardName.Replace("green", "").Replace("red", "").Replace("blue", "").Replace("yellow", "");
-                    Label ss = (Label)FindByName("joinCodeLabel");
-                    ss.Text = "Join code: " + topCardName;
+
                     if (color != cardColor && CardNamed != topCardName && CardNamed != "wild" && CardNamed != "draw4")
                     {
                         return;
@@ -324,7 +329,7 @@ namespace Uno_Spil__Real_
 
         public void drawCard(object sender, EventArgs e)
         {
-            if (turn != playerName) { return; }
+            if (turn != playerName || choosingColor) { return; }
             client.EmitAsync("draw-card", playerName);
         }
 
@@ -353,6 +358,15 @@ namespace Uno_Spil__Real_
             });
         }
 
+        private void GreenClicked(object sender, EventArgs e)
+        {
+            colorClicked("green");
+        }
+
+        private void BlueClicked(object sender, EventArgs e)
+        {
+            colorClicked("blue");
+        }
 
         private void YellowClicked(object sender, EventArgs e)
         {
@@ -364,20 +378,12 @@ namespace Uno_Spil__Real_
             colorClicked("red");
         }
 
-        private void GreenClicked(object sender, EventArgs e)
-        {
-            colorClicked("green");
-        }
-
-        private void BlueClicked(object sender, EventArgs e)
-        {
-            colorClicked("blue");
-        }
-
 
         private void colorClicked(string color)
         {
+            choosingColor = false;
             chooseColor.IsVisible = false;
+            DecksLayout.IsVisible = true;
             Dictionary<string, string> data = new Dictionary<string, string> {
                 { "player", playerName },
                 { "color", color}
