@@ -138,19 +138,15 @@
         <HorizontalStackLayout Grid.Row="1"
                                Grid.Column="2"
                                HorizontalOptions="Center"
-                               Spacing="25"
+                               Spacing="50"
                                IsVisible="false"
                                x:Name="chooseColor"
                                ZIndex="999">
-            <VerticalStackLayout VerticalOptions="Center">
-                <Button Background="red" WidthRequest="175" HeightRequest="175" Margin="0,25,0,25" Clicked="RedClicked"/>
-                <Button Background="blue" WidthRequest="175" HeightRequest="175" Margin="0,25,0,25" Clicked="BlueClicked"/>
-            </VerticalStackLayout>
+            <Button Background="blue" WidthRequest="175" HeightRequest="175" Clicked="RedClicked"/>
+            <Button Background="red" WidthRequest="175" HeightRequest="175" Clicked="BlueClicked"/>
 
-            <VerticalStackLayout VerticalOptions="Center">
-                <Button Background="yellow" WidthRequest="175" HeightRequest="175"  Margin="0,25,0,25" Clicked="YellowClicked"/>
-                <Button Background="green" WidthRequest="175" HeightRequest="175" Margin="0,25,0,25" Clicked="GreenClicked"/>
-            </VerticalStackLayout>
+            <Button Background="green" WidthRequest="175" HeightRequest="175" Clicked="GreenClicked"/>
+            <Button Background="yellow" WidthRequest="175" HeightRequest="175" Clicked="YellowClicked"/>
         </HorizontalStackLayout>
     </Grid>
         
