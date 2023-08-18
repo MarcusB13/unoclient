@@ -89,6 +89,14 @@ namespace Uno_Spil__Real_
                 });
             });
 
+            client.On("set-color", (res) =>
+            {
+                JsonElement data = res.GetValue();
+                SetColor(data.GetProperty("color").ToString());
+                turn = data.GetProperty("nextPlayer").ToString();
+                SetTurn(turn);
+            });
+
             client.On("set-turn", (res) =>
             {
                 MainThread.BeginInvokeOnMainThread(async () =>
@@ -98,6 +106,15 @@ namespace Uno_Spil__Real_
                     SetTurn(turn);
                 });
             });
+
+            client.On("choose-color", (res) =>
+            {
+                MainThread.BeginInvokeOnMainThread(async () =>
+                {
+                    chooseColor.IsVisible = true;
+                });
+            });
+
 
             client.On("start-game", (res) =>
             {
@@ -109,7 +126,7 @@ namespace Uno_Spil__Real_
                     string dataTopCard = data.GetProperty("topCard").ToString();
 
                     SetTurn(dataTurn);
-                    color = data.GetProperty("usedCardsColor").ToString();
+                    SetColor(data.GetProperty("usedCardsColor").ToString());
                     SetTopCard(dataTopCard);
                 });
             });
@@ -134,7 +151,7 @@ namespace Uno_Spil__Real_
                 string nextPlayer = data.GetProperty("nextPlayer").ToString();
                 bool displayUno = data.GetProperty("uno").GetBoolean();
                 topCard = data.GetProperty("topCard").ToString();
-                color = data.GetProperty("color").ToString();
+                SetColor(data.GetProperty("color").ToString());
 
                 MainThread.BeginInvokeOnMainThread(async () =>
                 {
@@ -165,9 +182,40 @@ namespace Uno_Spil__Real_
             usedCards.Source = baseUrl + "/public/" + topCard + ".png";
         }
 
+        public void SetColor(string thisColor)
+        {
+            color = thisColor;
+            switch (thisColor)
+            {
+                case "red":
+                    currentColor.Background = Microsoft.Maui.Controls.Brush.Red;
+                    break;
+
+                case "blue":
+                    currentColor.Background = Microsoft.Maui.Controls.Brush.Blue;
+                    break;
+
+                case "green":
+                    currentColor.Background = Microsoft.Maui.Controls.Brush.Green;
+                    break;
+
+                case "yellow":
+                    currentColor.Background = Microsoft.Maui.Controls.Brush.Yellow;
+                    break;
+            }
+        }
+
         public void SetTurn(string playersTurn)
         {
             turn = playersTurn;
+            for(int i = 1; i<5; i++)
+            {
+                Microsoft.Maui.Controls.Shapes.Rectangle rect = this.FindByName<Microsoft.Maui.Controls.Shapes.Rectangle>(playerName + "Turn");
+                rect.IsVisible = false;
+            }
+
+            Microsoft.Maui.Controls.Shapes.Rectangle turnRect = this.FindByName<Microsoft.Maui.Controls.Shapes.Rectangle>(playerName + "Turn");
+            turnRect.IsVisible = true;
         }
 
 
@@ -179,6 +227,10 @@ namespace Uno_Spil__Real_
             int currentRow = Grid.GetRow(playerLayout);
             int currentColumn = Grid.GetColumn(playerLayout);
             double currentRotation = playerLayout.Rotation;
+
+            Microsoft.Maui.Controls.Shapes.Rectangle rect = this.FindByName<Microsoft.Maui.Controls.Shapes.Rectangle>(playerName+"Turn");
+            int currentRowRect = Grid.GetRow(rect);
+            int currentColumnRect = Grid.GetColumn(rect);
             if (currentRow == 5 && currentColumn == 1)
             {
                 return;
@@ -189,13 +241,21 @@ namespace Uno_Spil__Real_
             int player1Column = Grid.GetColumn(playerToChangeWithLayout);
             double player1Rotation = playerToChangeWithLayout.Rotation;
 
+            Microsoft.Maui.Controls.Shapes.Rectangle rectplayer1 = this.FindByName<Microsoft.Maui.Controls.Shapes.Rectangle>("player1Turn");
+            int currentRowRectplayer1 = Grid.GetRow(rectplayer1);
+            int currentColumnRectplayer1 = Grid.GetColumn(rectplayer1);
+
             Grid.SetRow(playerLayout, player1Row);
             Grid.SetColumn(playerLayout, player1Column);
             playerLayout.Rotation = player1Rotation;
+            Grid.SetRow(rect, currentColumnRectplayer1);
+            Grid.SetColumn(rect, currentRowRectplayer1);
 
             Grid.SetRow(playerToChangeWithLayout, currentRow);
             Grid.SetColumn(playerToChangeWithLayout, currentColumn);
             playerToChangeWithLayout.Rotation = currentRotation;
+            Grid.SetRow(rectplayer1, currentRowRect);
+            Grid.SetColumn(rectplayer1, currentColumnRect);
         }
 
 
@@ -291,6 +351,38 @@ namespace Uno_Spil__Real_
                 Thread.Sleep(5000);
                 unoClicked = "false";
             });
+        }
+
+
+        private void YellowClicked(object sender, EventArgs e)
+        {
+            colorClicked("yellow");
+        }
+
+        private void RedClicked(object sender, EventArgs e)
+        {
+            colorClicked("red");
+        }
+
+        private void GreenClicked(object sender, EventArgs e)
+        {
+            colorClicked("green");
+        }
+
+        private void BlueClicked(object sender, EventArgs e)
+        {
+            colorClicked("blue");
+        }
+
+
+        private void colorClicked(string color)
+        {
+            chooseColor.IsVisible = false;
+            Dictionary<string, string> data = new Dictionary<string, string> {
+                { "player", playerName },
+                { "color", color}
+            };
+            client.EmitAsync("choose-color", data);
         }
     }
 }
