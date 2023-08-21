@@ -216,7 +216,8 @@ namespace Uno_Spil__Real_
             turn = playersTurn;
             for(int i = 1; i<5; i++)
             {
-                Microsoft.Maui.Controls.Shapes.Rectangle rect = this.FindByName<Microsoft.Maui.Controls.Shapes.Rectangle>("player" + i + "Turn");
+                string iName = "player" + i + "Turn";
+                Microsoft.Maui.Controls.Shapes.Rectangle rect = this.FindByName<Microsoft.Maui.Controls.Shapes.Rectangle>(iName);
                 rect.IsVisible = false;
             }
 
