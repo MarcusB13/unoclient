@@ -216,11 +216,11 @@ namespace Uno_Spil__Real_
             turn = playersTurn;
             for(int i = 1; i<5; i++)
             {
-                Microsoft.Maui.Controls.Shapes.Rectangle rect = this.FindByName<Microsoft.Maui.Controls.Shapes.Rectangle>(playerName + "Turn");
+                Microsoft.Maui.Controls.Shapes.Rectangle rect = this.FindByName<Microsoft.Maui.Controls.Shapes.Rectangle>("player" + i + "Turn");
                 rect.IsVisible = false;
             }
 
-            Microsoft.Maui.Controls.Shapes.Rectangle turnRect = this.FindByName<Microsoft.Maui.Controls.Shapes.Rectangle>(playerName + "Turn");
+            Microsoft.Maui.Controls.Shapes.Rectangle turnRect = this.FindByName<Microsoft.Maui.Controls.Shapes.Rectangle>(turn + "Turn");
             turnRect.IsVisible = true;
         }
 
