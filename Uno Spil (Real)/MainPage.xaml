@@ -64,7 +64,7 @@
                          x:Name="deckCards"
                          Clicked="drawCard"/>
 
-            <Rectangle x:Name="currentColor" WidthRequest="45" HeightRequest="45" Background="white"/>
+            <Rectangle x:Name="currentColor" ZIndex="9999" WidthRequest="45" HeightRequest="45" Background="white"/>
 
             <ImageButton Source="http://10.130.66.233:3000/public/back.png"
                          WidthRequest="250"
@@ -136,17 +136,19 @@
         </HorizontalStackLayout>
 
         <HorizontalStackLayout Grid.Row="1"
-                               Grid.Column="2"
-                               HorizontalOptions="Center"
+                               Grid.Column="1"
+                               HorizontalOptions="CenterAndExpand"
                                Spacing="50"
                                IsVisible="false"
                                x:Name="chooseColor"
-                               ZIndex="999">
-            <Button Background="blue" WidthRequest="175" HeightRequest="175" Clicked="RedClicked"/>
-            <Button Background="red" WidthRequest="175" HeightRequest="175" Clicked="BlueClicked"/>
+                               ZIndex="999"
+                               HeightRequest="500"
+                               WidthRequest="500">
+                <Button Background="red" WidthRequest="175" HeightRequest="175" Clicked="RedClicked"/>
+                <Button Background="blue" WidthRequest="175" HeightRequest="175" Clicked="BlueClicked"/>
 
-            <Button Background="green" WidthRequest="175" HeightRequest="175" Clicked="GreenClicked"/>
-            <Button Background="yellow" WidthRequest="175" HeightRequest="175" Clicked="YellowClicked"/>
+                <Button Background="green" WidthRequest="175" HeightRequest="175" Clicked="GreenClicked"/>
+                <Button Background="yellow" WidthRequest="175" HeightRequest="175" Clicked="YellowClicked"/>
         </HorizontalStackLayout>
     </Grid>
         

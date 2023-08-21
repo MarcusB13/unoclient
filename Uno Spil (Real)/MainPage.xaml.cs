@@ -157,10 +157,10 @@ namespace Uno_Spil__Real_
                 string nextPlayer = data.GetProperty("nextPlayer").ToString();
                 bool displayUno = data.GetProperty("uno").GetBoolean();
                 topCard = data.GetProperty("topCard").ToString();
-                SetColor(data.GetProperty("color").ToString());
 
                 MainThread.BeginInvokeOnMainThread(async () =>
                 {
+                    SetColor(data.GetProperty("color").ToString());
                     for (int i = 0; i < playersNames.GetArrayLength(); i++)
                     {
                         string iPlayerName = playersNames[i].ToString();
